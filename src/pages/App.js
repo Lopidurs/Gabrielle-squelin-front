@@ -26,7 +26,7 @@ function App(){
                     <Route path="/connexion" element={<Connexion />}/>
                     <Route path="/inscription" element={<Inscription />}/>
                     <Route path="/admin" element={<Admin />}/>
-                    <Route path="/*" element={<Error />}/>
+                    <Route path="*" element={<Error />}/>
                 </Routes>
                 <Footer />
             </BrowserRouter>
