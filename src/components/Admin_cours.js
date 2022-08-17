@@ -13,7 +13,7 @@ function Admin_cours(){
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/lessons/admin")
+        axios.get("https://gabrielle-squelin-back.herokuapp.com/lessons/admin")
             .then(
                 (result) => {
                     setIsLoaded(true);

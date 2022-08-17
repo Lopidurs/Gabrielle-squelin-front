@@ -15,7 +15,7 @@ import "../styles/Admin.css"
 function Admin() {
     const [role, setRole] = useState(null);
     useEffect(() => {
-        axios.post("http://localhost:3001/clients/verify", {accessToken: localStorage.getItem("accessToken")})
+        axios.post("https://gabrielle-squelin-back.herokuapp.com/clients/verify", {accessToken: localStorage.getItem("accessToken")})
             .then((res) => {
                 setRole(res.data)
         })

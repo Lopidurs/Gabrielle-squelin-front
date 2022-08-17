@@ -9,7 +9,7 @@ function Liste_cours(){
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/lessons")
+        axios.get("https://gabrielle-squelin-back.herokuapp.com/lessons")
             .then(
                 (result) => {
                     setIsLoaded(true);

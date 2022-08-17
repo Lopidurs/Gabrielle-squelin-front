@@ -15,7 +15,7 @@ function Admin_confection(){
 
 
     useEffect(() => {
-        axios.get("http://localhost:3001/commands")
+        axios.get("https://gabrielle-squelin-back.herokuapp.com/commands")
             .then(
                 (result) => {
                     setIsLoaded(true);

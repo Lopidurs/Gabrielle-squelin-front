@@ -9,7 +9,7 @@ function Admin_client() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/clients")
+        axios.get("https://gabrielle-squelin-back.herokuapp.com/clients")
             .then(
                 (result) => {
                     setIsLoaded(true);

@@ -17,7 +17,7 @@ function Connexion() {
 
         event.preventDefault()
 
-        axios.post("http://localhost:3001/clients/login", user)
+        axios.post("https://gabrielle-squelin-back.herokuapp.com/clients/login", user)
             .then(res => {
                 if (res.data.error) {
                     alert(res.data.error)

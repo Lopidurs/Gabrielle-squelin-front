@@ -3,7 +3,7 @@ import axios from "axios";
 function Admin_form_cours(){
     function sendFormLesson(event) {
         event.preventDefault()
-        axios.post("http://localhost:3001/lessons", {
+        axios.post("https://gabrielle-squelin-back.herokuapp.com/lessons", {
             Title: event.target[0].value,
             Date: event.target[1].value,
             BeginHour: event.target[2].value,

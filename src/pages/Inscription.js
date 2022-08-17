@@ -15,7 +15,7 @@ function Inscription() {
                 Phone: event.target[3].value,
                 Password: event.target[4].value
             };
-            axios.post("http://localhost:3001/clients", newUser)
+            axios.post("https://gabrielle-squelin-back.herokuapp.com/clients", newUser)
             navigate('/')
         } else {
             event.preventDefault()

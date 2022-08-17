@@ -3,7 +3,7 @@ import axios from "axios";
 
 function Form_confection(){
     function sendFormConf(event) {
-            axios.post("http://localhost:3001/commands", {
+            axios.post("https://gabrielle-squelin-back.herokuapp.com/commands", {
                 Type: event.target[0].value,
                 Occasion: event.target[1].value,
                 Date: event.target[2].value,

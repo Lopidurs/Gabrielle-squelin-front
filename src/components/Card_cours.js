@@ -2,7 +2,7 @@ import axios from "axios";
 
 function Card_cours(props){
     function inscriptionCours() {
-        axios.post(`http://localhost:3001/lessons/ins/${props.data.id}`,{}, {
+        axios.post(`https://gabrielle-squelin-back.herokuapp.com/lessons/ins/${props.data.id}`,{}, {
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             }
