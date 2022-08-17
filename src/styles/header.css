@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+SC");
+
+.navigation {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.navigation .logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+.brand-name {
+    font-family: "Cormorant SC",sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+#btnDeco {
+    color: var(--secondary-color);
+}
+.groupe_button{
+    margin-left: auto;
+    margin-right: 80px;
+}
+
+.groupe_button button{
+    margin-left: 10px;
+}
+.navigation-menu {
+margin-left: 3rem;
+}
+.navigation-menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navigation-menu li {
+list-style-type: none;
+    margin: 0 1rem;
+}
+.navigation-menu a {
+    display: block;
+    width: 100%;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.navigation-menu a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+.hamburger {
+border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+}
+.hamburger:hover {
+    background-color: #7a802d;
+}
+.navigation-menu li .connexion-mobile{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navigation-menu ul {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navigation-menu ul {
+    position: absolute;
+        top: 60px;
+        left: 0;
+    flex-direction: column;
+    width: 100%;
+        height: calc(100vh - 77px);
+        background-color: var(--bg);
+        border-top: 1px solid black;
+    }
+    .navigation-menu li {
+    text-align: center;
+        margin: 0;
+    }
+    .navigation-menu li a {
+        color: black;
+    width: 100%;
+        padding: 1.5rem 0;
+    }
+    .navigation-menu li:hover {
+        background-color: #eee;
+    }
+    .navigation-menu button{
+        display: none;
+    }
+    .navigation-menu li .connexion-mobile{
+        display: block;
+    }
+    .groupe_button {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navigation-menu ul {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navigation-menu.expanded ul {
+        display: block;
+    }
+}
