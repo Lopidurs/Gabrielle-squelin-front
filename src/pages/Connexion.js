@@ -4,11 +4,15 @@ import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 
 
-
 function Connexion() {
     let navigate = useNavigate();
 
     function sendForm(event) {
+        /*Cette fonction va récupérer les données entrer dans le formulaire et l'envoyer au backend puis si le compte
+        et le mot de passe sont bons, va enregistrer le token de la personne dans le local storage
+        PRE : /
+        POST : /
+        */
 
         const user = {
             Email: event.target[0].value,
@@ -21,8 +25,7 @@ function Connexion() {
             .then(res => {
                 if (res.data.error) {
                     alert(res.data.error)
-                }
-                else {
+                } else {
                     localStorage.setItem("accessToken", res.data)
                     navigate('/')
                     window.location.reload()
@@ -40,7 +43,8 @@ function Connexion() {
                 </div>
                 <div>
                     <label htmlFor="password">Mot de passe</label>
-                    <input type="password" name="password" id="password" placeholder="●●●●●●●●●" autoComplete="off" required/>
+                    <input type="password" name="password" id="password" placeholder="●●●●●●●●●" autoComplete="off"
+                           required/>
                 </div>
                 <button type="submit" className="bouton_plein">Se Connecter</button>
             </form>

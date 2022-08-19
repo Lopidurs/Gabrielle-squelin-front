@@ -1,14 +1,18 @@
 import {useEffect, useState} from "react";
 import Spinner from "react-bootstrap/Spinner";
-import Card_cours from "./Card_cours";
+import CardCours from "./CardCours";
 import axios from "axios";
 
-function Liste_cours(){
+function ListeCours() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
     useEffect(() => {
+        /*Cette fonction va récupérer la liste des cours et l'afficher
+        PRE : /
+        POST : /
+        */
         axios.get("https://gabrielle-squelin-back.herokuapp.com/lessons")
             .then(
                 (result) => {
@@ -25,18 +29,19 @@ function Liste_cours(){
     if (error) {
         return <div><h1>Liste des cours :</h1>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
-        return <div><h1>Liste des cours :</h1><Spinner animation="border" /></div>;
+        return <div><h1>Liste des cours :</h1><Spinner animation="border"/></div>;
     } else {
         return (
             <div>
                 {items.map((item, index) => {
                     return (
-                        <Card_cours key={`${index} - ${item}`} data={item}/>
+                        <CardCours key={`${index} - ${item}`} data={item}/>
                     )
                 })}
             </div>
         )
 
-}}
+    }
+}
 
-export default Liste_cours
+export default ListeCours

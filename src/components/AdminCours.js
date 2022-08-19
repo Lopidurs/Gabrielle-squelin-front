@@ -7,12 +7,16 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 
-function Admin_cours(){
+function AdminCours() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
     useEffect(() => {
+        /*Cette fonction va récupérer la liste des cours et l'afficher
+        PRE : /
+        POST : la liste des cours
+        */
         axios.get("https://gabrielle-squelin-back.herokuapp.com/lessons/admin")
             .then(
                 (result) => {
@@ -29,7 +33,7 @@ function Admin_cours(){
     if (error) {
         return <div><h1>Cours :</h1>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
-        return <div><h1>Cours :</h1><Spinner animation="border" /></div>;
+        return <div><h1>Cours :</h1><Spinner animation="border"/></div>;
     } else {
         return (
             <div className={"admin-cours"}>
@@ -100,6 +104,7 @@ function Admin_cours(){
                     </Row>
                 </Tab.Container>
             </div>)
-}}
+    }
+}
 
-export default Admin_cours
+export default AdminCours
